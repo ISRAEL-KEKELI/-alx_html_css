@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4a2b055604.js" crossorigin="anonymous"></script>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Smile School</title>
+    <style>
+        /* Custom styles for specific elements not easily done with utility classes */
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333333; /* Default text color for light sections */
+        }
+        .text-primary-red {
+            color: #FF6565;
+        }
+        .bg-primary-red {
+            background-color: #FF6565;
+        }
+        .dark-section * {
+            color: white; /* Ensure all text in dark sections is white */
+        }
+        .dark-section h1, .dark-section h2, .dark-section h3 {
+             color: white;
+        }
+        .tutorial-card {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease;
+        }
+        .tutorial-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Primary Dark Background Wrapper for Header and Hero Content -->
+    <div class="dark-section bg-[#071629] pb-20">
+
+        <header class="container mx-auto px-4 pt-4 lg:pt-10">
+            <nav class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <img src="https://fakeimg.pl/50x50/FF6565/FFFFFF?text=S" alt="logo" class="h-12 w-12 rounded-lg">
+                    <span class="text-2xl font-bold text-white tracking-widest">SMILE</span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <ul class="hidden md:flex space-x-8 text-white text-sm font-semibold">
+                    <li><a href="#" class="hover:text-primary-red transition duration-300">COURSE</a></li>
+                    <li><a href="#" class="hover:text-primary-red transition duration-300">PRICING</a></li>
+                    <li><a href="#" class="hover:text-primary-red transition duration-300">LOGIN</a></li>
+                </ul>
+
+                <!-- Mobile Menu Icon (Hamburger) -->
+                <button class="md:hidden text-2xl text-white focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Hero Section -->
+            <section class="container mx-auto px-4 mt-16 text-center">
+                <div class="max-w-4xl mx-auto">
+                    <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold mb-4">Get <span class="text-primary-red">schooled</span></h1>
+                    <div class="flex justify-center space-x-8 text-2xl md:text-3xl font-light tracking-widest uppercase mb-10">
+                        <span>SMILES</span>
+                        <span>GRIN</span>
+                        <span>LAUGH</span>
+                    </div>
+                    <button class="bg-primary-red hover:bg-red-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg uppercase transition duration-300">
+                        REGISTER FOR FREE
+                    </button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Learn from the pros Section (Dark Background Continuation) -->
+    <div class="dark-section bg-[#071629] py-16">
+        <section class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-light text-center mb-16">
+                <span class="font-normal">Learn</span> from the <span class="text-primary-red font-normal">pros</span>
+            </h2>
+
+            <!-- Professionals Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                <!-- Pro 1 -->
+                <div class="flex flex-col items-center">
+                    <!-- Placeholder Image for Phillip Massey -->
+                    <img src="https://placehold.co/150x150/FF6565/FFFFFF?text=P" alt="Phillip Massey" class="w-36 h-36 rounded-full object-cover mb-4 border-4 border-white/20">
+                    <h3 class="text-xl font-bold mb-1">Phillip Massey</h3>
+                    <p class="text-sm font-light italic opacity-80">« Smile of the year » 2018 - 2019</p>
+                </div>
+                <!-- Pro 2 -->
+                <div class="flex flex-col items-center">
+                    <!-- Placeholder Image for Nannie Lawrence -->
+                    <img src="https://placehold.co/150x150/FF6565/FFFFFF?text=N" alt="Nannie Lawrence" class="w-36 h-36 rounded-full object-cover mb-4 border-4 border-white/20">
+                    <h3 class="text-xl font-bold mb-1">Nannie Lawrence</h3>
+                    <p class="text-sm font-light italic opacity-80">Best « little smile » 2017</p>
+                </div>
+                <!-- Pro 3 -->
+                <div class="flex flex-col items-center">
+                    <!-- Placeholder Image for Bruce Walters -->
+                    <img src="https://placehold.co/150x150/FF6565/FFFFFF?text=B" alt="Bruce Walters" class="w-36 h-36 rounded-full object-cover mb-4 border-4 border-white/20">
+                    <h3 class="text-xl font-bold mb-1">Bruce Walters</h3>
+                    <p class="text-sm font-light italic opacity-80">Best « Friend Smile » live performance 2019</p>
+                </div>
+                <!-- Pro 4 -->
+                <div class="flex flex-col items-center">
+                    <!-- Placeholder Image for Henry Hughes -->
+                    <img src="https://placehold.co/150x150/FF6565/FFFFFF?text=H" alt="Henry Hughes" class="w-36 h-36 rounded-full object-cover mb-4 border-4 border-white/20">
+                    <h3 class="text-xl font-bold mb-1">Henry Hughes</h3>
+                    <p class="text-sm font-light italic opacity-80">« 24h smiles » winner 2016 - 2019</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Quote Section (Testimonial) - Light Background for contrast -->
+    <section class="bg-gray-100 py-20">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                <!-- Testimonial Image -->
+                <div class="flex-shrink-0">
+                    <img src="https://placehold.co/160x160/333333/FFFFFF?text=Quote+Image" alt="Testimonial Image" class="w-40 h-40 rounded-full object-cover shadow-xl">
+                </div>
+                <!-- Quote Content -->
+                <div class="text-center md:text-left">
+                    <blockquote class="text-xl italic font-light leading-relaxed mb-4">
+                        « Those tutorials are concise and go straight to the point. I can’t think of a better place to learn smiling. And it’s so fun!
+                    </blockquote>
+                    <h3 class="text-lg font-bold text-gray-800">NAME</h3>
+                    <p class="text-sm text-gray-600 font-light">weather presenter</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Most Popular Tutorials Section -->
+    <section class="py-20 bg-white">
+        <h2 class="text-3xl md:text-4xl font-normal text-center mb-16">
+            Most <span class="text-primary-red font-normal">popular</span> tutorials
+        </h2>
+
+        <!-- Tutorials Grid -->
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <!-- Tutorial Card 1 -->
+                <div class="tutorial-card bg-white rounded-xl overflow-hidden text-center p-4">
+                    <div class="relative mb-4">
+                        <img src="https://placehold.co/300x170/333333/FFFFFF?text=Diagonal+Smile" alt="Diagonal Smile" class="w-full h-auto rounded-lg">
+                        <!-- Play Button Overlay -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-play text-4xl text-primary-red opacity-80 hover:opacity-100 cursor-pointer transition duration-300"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 text-gray-900">Diagonal Smile</h3>
+                    <p class="text-sm text-gray-600 mb-4 line-clamp-3">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
+
+                    <!-- Author Info -->
+                    <div class="flex items-center justify-center space-x-3 mb-3">
+                        <img src="https://placehold.co/40x40/FF6565/FFFFFF?text=P" alt="Phillip Massey" class="w-10 h-10 rounded-full object-cover">
+                        <h4 class="font-semibold text-primary-red">Phillip Massey</h4>
+                    </div>
+
+                    <!-- Rating and Duration -->
+                    <div class="flex justify-between items-center text-xs px-2">
+                        <!-- Stars Rating -->
+                        <div class="flex space-x-1 text-primary-red">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star opacity-30"></i> <!-- Assuming 4 out of 5 stars -->
+                        </div>
+                        <p class="text-gray-600 font-semibold">8 min</p>
+                    </div>
+                </div>
+
+                <!-- Tutorial Card 2 (Duplicating structure with different text/image for responsiveness test) -->
+                <div class="tutorial-card bg-white rounded-xl overflow-hidden text-center p-4">
+                    <div class="relative mb-4">
+                        <img src="https://placehold.co/300x170/333333/FFFFFF?text=Happy+Smile" alt="Happy Smile" class="w-full h-auto rounded-lg">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-play text-4xl text-primary-red opacity-80 hover:opacity-100 cursor-pointer transition duration-300"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 text-gray-900">Happy Smile</h3>
+                    <p class="text-sm text-gray-600 mb-4 line-clamp-3">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
+
+                    <div class="flex items-center justify-center space-x-3 mb-3">
+                        <img src="https://placehold.co/40x40/FF6565/FFFFFF?text=P" alt="Phillip Massey" class="w-10 h-10 rounded-full object-cover">
+                        <h4 class="font-semibold text-primary-red">Phillip Massey</h4>
+                    </div>
+
+                    <div class="flex justify-between items-center text-xs px-2">
+                        <div class="flex space-x-1 text-primary-red">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star opacity-30"></i>
+                        </div>
+                        <p class="text-gray-600 font-semibold">8 min</p>
+                    </div>
+                </div>
+
+                <!-- Tutorial Card 3 -->
+                <div class="tutorial-card bg-white rounded-xl overflow-hidden text-center p-4">
+                    <div class="relative mb-4">
+                        <img src="https://placehold.co/300x170/333333/FFFFFF?text=Natural+Smile" alt="Natural Smile" class="w-full h-auto rounded-lg">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-play text-4xl text-primary-red opacity-80 hover:opacity-100 cursor-pointer transition duration-300"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 text-gray-900">Natural Smile</h3>
+                    <p class="text-sm text-gray-600 mb-4 line-clamp-3">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
+
+                    <div class="flex items-center justify-center space-x-3 mb-3">
+                        <img src="https://placehold.co/40x40/FF6565/FFFFFF?text=P" alt="Phillip Massey" class="w-10 h-10 rounded-full object-cover">
+                        <h4 class="font-semibold text-primary-red">Phillip Massey</h4>
+                    </div>
+
+                    <div class="flex justify-between items-center text-xs px-2">
+                        <div class="flex space-x-1 text-primary-red">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star opacity-30"></i>
+                        </div>
+                        <p class="text-gray-600 font-semibold">8 min</p>
+                    </div>
+                </div>
+
+                <!-- Tutorial Card 4 -->
+                <div class="tutorial-card bg-white rounded-xl overflow-hidden text-center p-4">
+                    <div class="relative mb-4">
+                        <img src="https://placehold.co/300x170/333333/FFFFFF?text=Sad+Smile" alt="Sad Smile" class="w-full h-auto rounded-lg">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-play text-4xl text-primary-red opacity-80 hover:opacity-100 cursor-pointer transition duration-300"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 text-gray-900">Sad Smile</h3>
+                    <p class="text-sm text-gray-600 mb-4 line-clamp-3">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
+
+                    <div class="flex items-center justify-center space-x-3 mb-3">
+                        <img src="https://placehold.co/40x40/FF6565/FFFFFF?text=P" alt="Phillip Massey" class="w-10 h-10 rounded-full object-cover">
+                        <h4 class="font-semibold text-primary-red">Phillip Massey</h4>
+                    </div>
+
+                    <div class="flex justify-between items-center text-xs px-2">
+                        <div class="flex space-x-1 text-primary-red">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star opacity-30"></i>
+                        </div>
+                        <p class="text-gray-600 font-semibold">8 min</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Free Membership Section (Dark Background) -->
+    <section class="dark-section bg-[#071629] py-20">
+        <h2 class="text-3xl md:text-4xl font-light text-center mb-16">
+            <span class="font-normal">Free</span> membership
+        </h2>
+
+        <!-- Membership Benefits Grid -->
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center mb-12">
+                <!-- Benefit 1 -->
+                <div>
+                    <!-- Replaced smile.svg with a placeholder icon -->
+                    <div class="text-primary-red text-6xl mb-4">
+                        <i class="far fa-grin-hearts"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Lorem Ipsum</h3>
+                    <p class="text-sm font-light opacity-80">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <!-- Benefit 2 -->
+                <div>
+                    <div class="text-primary-red text-6xl mb-4">
+                        <i class="far fa-grin-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Lorem Ipsum</h3>
+                    <p class="text-sm font-light opacity-80">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <!-- Benefit 3 -->
+                <div>
+                    <div class="text-primary-red text-6xl mb-4">
+                        <i class="far fa-laugh-squint"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Lorem Ipsum</h3>
+                    <p class="text-sm font-light opacity-80">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <!-- Benefit 4 -->
+                <div>
+                    <div class="text-primary-red text-6xl mb-4">
+                        <i class="far fa-smile-beam"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Lorem Ipsum</h3>
+                    <p class="text-sm font-light opacity-80">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="text-center">
+                <button class="bg-primary-red hover:bg-red-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg uppercase transition duration-300">
+                    REGISTER FOR FREE
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- F.A.Q Section -->
+    <section class="py-20 bg-white">
+        <h2 class="text-3xl md:text-4xl font-normal text-center mb-16">
+            F.A.Q
+        </h2>
+        <div class="container mx-auto px-4 max-w-5xl">
+            <!-- FAQ Content Wrapper -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-10">
+                <!-- Column 1 -->
+                <div class="space-y-10">
+                    <!-- FAQ Item 1 -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-bold text-gray-900">How does this work?</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-bold text-gray-900">How does this work?</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="space-y-10">
+                    <!-- FAQ Item 3 -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-bold text-gray-900">How does this work?</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-bold text-gray-900">How does this work?</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer (Dark Background) -->
+    <footer class="dark-section bg-[#071629] py-12">
+        <section class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <!-- Logo and Social Icons Wrapper -->
+                <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-16">
+                    <!-- Logo -->
+                    <div class="flex items-center space-x-2">
+                        <img src="https://fakeimg.pl/50x50/FF6565/FFFFFF?text=S" alt="logo" class="h-12 w-12 rounded-lg">
+                        <span class="text-2xl font-bold text-white tracking-widest">SMILE</span>
+                    </div>
+
+                    <!-- Social Media Icons -->
+                    <div class="flex space-x-6 text-2xl">
+                        <a href="#" class="hover:text-primary-red transition duration-300"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="hover:text-primary-red transition duration-300"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="hover:text-primary-red transition duration-300"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Copyright -->
+                <p class="text-sm font-light text-white/50 mt-8 md:mt-0">©smileschool 2020</p>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>
